@@ -3,9 +3,13 @@ The Currency Converter is a React application built with Vite and styled using T
 
 # Features
 ~ Real-time exchange rates
+
 ~ Support for multiple currencies
+
 ~ Responsive and user-friendly interface
+
 ~ Built with Vite for fast development and build processes
+
 ~ Styled using TailwindCSS for easy and flexible design
 
 # Demo
