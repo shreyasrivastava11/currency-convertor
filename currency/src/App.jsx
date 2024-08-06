@@ -4,13 +4,13 @@ import { useState } from 'react'
 
 function App() {
   const [amount, setAmount] = useState(0);
-  const [from , setFrom] = useState("usd");
-  const [to, setTo] = useState("inr")
+  const [from , setFrom] = useState("USD");
+  const [to, setTo] = useState("INR")
   const [convertedAmount, setconvertedAmount] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from) || {};
   const options = Object.keys(currencyInfo);
-  console.log(options);
+  
   
   const swap = () => {
     setFrom(to)
@@ -19,6 +19,8 @@ function App() {
   const convert = () => {
     setconvertedAmount(amount * currencyInfo[to])
   }
+
+
   return (
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -42,6 +44,7 @@ function App() {
                             onCurrencyChange={(currency) => setFrom(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
+                            key='ssad'
                         />
                     </div>
                     <div className="relative w-full h-0.5">
@@ -61,6 +64,7 @@ function App() {
                             onCurrencyChange={(currency) => setTo(currency)}
                             selectCurrency={to}
                             amountDisable={true}
+                            key='asdadsfdff'
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
